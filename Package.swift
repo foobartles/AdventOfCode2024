@@ -6,19 +6,18 @@ import PackageDescription
 let package = Package(
     name: "AdventOfCode2024",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "AdventOfCode2024",
-            targets: ["AdventOfCode2024"]),
+        .executable(name: "day01", targets: ["Day01"]),
+    ],
+    dependencies: [
+//        .package(url: "https://github.com/getGuaka/Regex.git", branch: "master"),
+        .package(
+          url: "https://github.com/apple/swift-collections.git",
+          .upToNextMinor(from: "1.1.0")
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "AdventOfCode2024"),
-        .testTarget(
-            name: "AdventOfCode2024Tests",
-            dependencies: ["AdventOfCode2024"]
-        ),
+        .target(name: "Day01", dependencies: ["Shared",
+                                              .product(name: "Collections", package: "swift-collections")]),
+        .target(name: "Shared", resources: [.process("Inputs")])
     ]
 )

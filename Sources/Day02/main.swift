@@ -13,7 +13,6 @@
 import Shared
 import Foundation
 
-
 // Safe Report Requirements:
 // Any two adjacent levels differ by at least one and at most three.
 // The levels are either all increasing or all decreasing.

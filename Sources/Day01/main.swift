@@ -1,17 +1,17 @@
 //
-//  Day1.swift
+//  main.swift
 //  AdventOfCode2024
 //
 //  Created by Jake Bartles on 12/8/24.
 //
 
-import Shared
-import Foundation
-
 /*
  --- Day 1: Historian Hysteria ---
  https://adventofcode.com/2024/day/1
  */
+
+import Shared
+import Foundation
 
 final class SideBySideLocationIds: CustomStringConvertible {
     private var leftSide: [Int]
@@ -77,6 +77,7 @@ final class SideBySideLocationIds: CustomStringConvertible {
 guard let stringInput = getInputAsString(for: "day01") else {
     exit(1)
 }
+
 guard let sideBySideLocationIds = SideBySideLocationIds(input: stringInput) else {
     print("⚠️ Errror initializing SideBySideLocationIds struct")
     exit(1)

@@ -11,6 +11,7 @@ let package = Package(
         .executable(name: "day02", targets: ["Day02"]),
         .executable(name: "day03", targets: ["Day03"]),
         .executable(name: "day04", targets: ["Day04"]),
+        .executable(name: "day05", targets: ["Day05"]),
     ],
     dependencies: [
 //        .package(
@@ -23,6 +24,7 @@ let package = Package(
         .executableTarget(name: "Day02", dependencies: ["Shared"]),
         .executableTarget(name: "Day03", dependencies: ["Shared"]),
         .executableTarget(name: "Day04", dependencies: ["Shared"]),
+        .executableTarget(name: "Day05", dependencies: ["Shared"]),
         .target(name: "Shared", resources: [.process("Inputs")])
     ]
 )

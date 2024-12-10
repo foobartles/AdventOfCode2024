@@ -5,6 +5,11 @@
 //  Created by Jake Bartles on 12/8/24.
 //
 
+/*
+ --- Day 5: Print Queue ---
+ https://adventofcode.com/2024/day/5
+ */
+
 import Shared
 import Foundation
 
@@ -18,7 +23,6 @@ final class SafetyManualUpdate {
     var invalidPageUpdates: Set<[Int]> = .init()
     var fixedInvalidPageUpdates: Set<[Int]> = .init()
 
-    
     init?(from rawData: String) {
         let splitData = rawData.components(separatedBy: "\n\n")
         guard let rawPageOrderingRules = splitData[safe: 0],

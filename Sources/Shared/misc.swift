@@ -24,3 +24,13 @@ public func getInputAsString(for day: String) -> String? {
     }
     return nil
 }
+
+public struct Coordinate: Hashable {
+    public let row: Int
+    public let col: Int
+    
+    public init(_ row: Int, _ col: Int) {
+        self.row = row
+        self.col = col
+    }
+}

@@ -16,10 +16,10 @@ let package = Package(
         .executable(name: "day07", targets: ["Day07"]),
     ],
     dependencies: [
-//        .package(
-//          url: "https://github.com/apple/swift-collections.git",
-//          .upToNextMinor(from: "1.1.0")
-//        )
+        .package(
+          url: "https://github.com/apple/swift-collections.git",
+          .upToNextMinor(from: "1.1.0")
+        )
     ],
     targets: [
         .executableTarget(name: "Day01", dependencies: ["Shared"]),
@@ -28,7 +28,9 @@ let package = Package(
         .executableTarget(name: "Day04", dependencies: ["Shared"]),
         .executableTarget(name: "Day05", dependencies: ["Shared"]),
         .executableTarget(name: "Day06", dependencies: ["Shared"]),
-        .executableTarget(name: "Day07", dependencies: ["Shared"]),
+        .executableTarget(name: "Day07", dependencies: [
+            "Shared", .product(name: "Collections", package: "swift-collections")
+        ]),
         .target(name: "Shared", resources: [.process("Inputs")])
     ]
 )

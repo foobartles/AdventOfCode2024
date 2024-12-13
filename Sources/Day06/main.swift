@@ -224,6 +224,5 @@ guard let labMap = LabMap(from: stringInput) else {
     exit(1)
 }
 
-//print(labMap.patrolPathMap)
 print(labMap.uniqueGuardPositions.count)
 print(labMap.findInfiniteLoops())
